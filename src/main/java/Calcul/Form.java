@@ -153,7 +153,7 @@ public class Form {
 		
 		
 		public static void main(String[] args) {
-			Form student = new Form();
+			Avtorization student = new Avtorization();
 			
 		}
 		
