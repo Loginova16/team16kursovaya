@@ -56,7 +56,7 @@ public class ListenerCreate implements ActionListener {
 	    	
 	    
 	    //добавление изображения в pdf
-	    URL url = getClass().getResource("/picture/ugatu.png");
+	    URL url = getClass().getResource("/picture/calcul.jpg");
 	    Image img = null;
 		try {
 			img = Image.getInstance(url.toString());
@@ -73,7 +73,7 @@ public class ListenerCreate implements ActionListener {
 			e2.printStackTrace();
 		}
 		
-		img.setAbsolutePosition(90, 500); //позиционирование изображения в PDF
+		img.setAbsolutePosition(90, 400); //позиционирование изображения в PDF
 		
 		try {
 				document.add(img);
@@ -134,7 +134,7 @@ public class ListenerCreate implements ActionListener {
 		Stream.of("Smena", "Time", "Dni", "Summa")
 	      .forEach(columnTitle -> {
 	        PdfPCell header = new PdfPCell();
-	        header.setBackgroundColor(BaseColor.LIGHT_GRAY);
+	        header.setBackgroundColor(BaseColor.PINK);
 	        header.setBorderWidth(2);
 	        header.setPhrase(new Phrase(columnTitle));
 	        table.addCell(header);
