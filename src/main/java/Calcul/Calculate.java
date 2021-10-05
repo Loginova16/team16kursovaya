@@ -1,23 +1,40 @@
 package Calcul; // Используем пакет Калькулятор
 
+import java.io.FileReader;
+import java.io.IOException;
+
 import javax.swing.JLabel; 
 
 public class Calculate implements CalculateInterface{ // Создаем класс Calculate использующий CalculateInterface
 	public static String result;
 	boolean isPremia = false; 
 	boolean ychitivatNalog = false;
-	float H, T, a, D1,D2, C, Z, X; // H- налог T-тарифная ставка a-процент премии D1-новая сумма зарплаты(БЕЗ УЧЕТА НДФЛ) D2-новая сумма вклада(С УЧЕТОМ НДФЛ) С-
+	float H, T, a, D1,D2, C, Z, X, c; // H- налог T-тарифная ставка a-процент премии D1-новая сумма зарплаты(БЕЗ УЧЕТА НДФЛ) D2-новая сумма вклада(С УЧЕТОМ НДФЛ) С-
 	
 	@Override // Переопределяет метод интерфейса
 	public void CalculateNalog()
 	{
 		//высчитываем сумму премии
-				if(isPremia)
-					H = (float) (T*Z*X)*1.2f;  
-				else
-					H = (float) (T*Z*X);
-				
-	}
+		if(isPremia) {
+			try(FileReader reader = new FileReader("prem.txt"))
+			{
+			// читаем посимвольно
+
+			while((c=reader.read())!=-1) {
+
+
+			}
+			}
+			catch(IOException ex){
+
+			System.out.println(ex.getMessage());
+			}
+
+			H = (float) (T*Z*X)*c;
+			}else {
+			H = (float) (T*Z*X);
+
+			}}
 	@Override
 	public void CalculatePrecent() {
 		//высчитываем новую сумму зп с учетом процентов
