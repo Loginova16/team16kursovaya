@@ -1,20 +1,20 @@
-package Calcul;
+//package Calcul;
 
-import static org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.Test;
+//import static org.junit.Assert.*;
+//import org.junit.Before;
+//import org.junit.Test;
 
-public class MTest {
+//public class MTest {
 
-Info information;
-@Before
-	public void setUp() throws Exception {
-	information = new Info("Модератор - Логинова Анастасия", 500, 110);
-	}
+//Info information;
+//@Before
+//	public void setUp() throws Exception {
+//	information = new Info("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 500, 110);
+//	}
+//
+//@Test
+//public void test() {
+//	assertTrue(information.getTitle().equals("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"));
+//}
 
-@Test
-public void test() {
-	assertTrue(information.getTitle().equals("Модератор - Логинова Анастасия"));
-}
-
-}
+//}

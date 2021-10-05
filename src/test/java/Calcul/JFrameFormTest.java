@@ -1,33 +1,33 @@
-package Calcul;
+//package Calcul;
 
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 
-import org.junit.Before;
-import org.junit.Test;
+//import org.junit.Before;
+//import org.junit.Test;
 
-public class JFrameFormTest {
+//public class JFrameFormTest {
 
-	TestClass testClass;
-	   @Before
-	    public void setUp() throws Exception {
-		   testClass = new TestClass("test", 0, 0); // тестовый класс котоый расширяет абстрактный класс JFrameForm и задается title - название сверху  
-	    }
+//	TestClass testClass;
+//	   @Before
+//	    public void setUp() throws Exception {
+//		   testClass = new TestClass("test", 0, 0); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ JFrameForm пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ title - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ  
+//	    }
 
-	    @Test
-	    public void test() {
-	        assertTrue("test".equals(testClass.getTitle())); // проверка совпадает ли название (абстракстый класс сработал верно) 
-	    }
-}
+//	    @Test
+//	    public void test() {
+//	        assertTrue("test".equals(testClass.getTitle())); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ) 
+//	    }
+//}
 
-class TestClass extends JFrameForm{
+//class TestClass extends JFrameForm{
 
-	public TestClass(String _title, int width, int height) {
-		super(_title, width, height);
-		// TODO Auto-generated constructor stub
-	}
+//	public TestClass(String _title, int width, int height) {
+//		super(_title, width, height);
+//		// TODO Auto-generated constructor stub
+//	}
 
-}
+//}
 
 
-// в 13 строке создается абстрактный класс и он задает имя test, в 18 строке идет проверка стал ли он реально test,
-// если стал, то тест пройден
+// пїЅ 13 пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ test, пїЅ 18 пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ test,
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ

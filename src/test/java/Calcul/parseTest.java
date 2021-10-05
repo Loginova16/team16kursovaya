@@ -1,19 +1,19 @@
-package Calcul;
+//package Calcul;
 
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 
-import org.junit.Before;
-import org.junit.Test;
+//import org.junit.Before;
+//import org.junit.Test;
 
-public class parseTest {
-	Calculate calc;
-	@Before
-    public void setUp() throws Exception {
-		calc = new Calculate("10", "6", "10000", true, true); // создаем экземпляр класса calculate - входные данные не иимеют значения
-    }
+//public class parseTest {
+//	Calculate calc;
+//	@Before
+//    public void setUp() throws Exception {
+//		calc = new Calculate("10", "6", "10000", true, true); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ calculate - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+//   }
 
-    @Test
-    public void test() {
-        assertTrue(calc.ParseAllData("10", "0.023f", "010.2")); // убеждаемся что данные могут быть конвертированны в Float
-    }
-}
+//    @Test
+//    public void test() {
+//        assertTrue(calc.ParseAllData("10", "0.023f", "010.2")); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Float
+//    }
+//}
