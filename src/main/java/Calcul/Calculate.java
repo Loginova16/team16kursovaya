@@ -3,7 +3,7 @@ package Calcul; // Используем пакет Калькулятор
 import javax.swing.JLabel; 
 
 public class Calculate implements CalculateInterface{ // Создаем класс Calculate использующий CalculateInterface
-	
+	public static String result;
 	boolean isPremia = false; 
 	boolean ychitivatNalog = false;
 	float H, T, a, D1,D2, C, Z, X; // H- налог T-тарифная ставка a-процент премии D1-новая сумма зарплаты(БЕЗ УЧЕТА НДФЛ) D2-новая сумма вклада(С УЧЕТОМ НДФЛ) С-
@@ -20,12 +20,12 @@ public class Calculate implements CalculateInterface{ // Создаем клас
 	}
 	@Override
 	public void CalculatePrecent() {
-		//высчитываем новую сумму вклада с учетом процентов
+		//высчитываем новую сумму зп с учетом процентов
 		D1 =  (float) H;
 	}
 	@Override 
 	public void CalculateDohod() {
-		//считаем итоговое значение вклада, с учетом или без учета налога
+		//считаем итоговое значение зп, с учетом или без учета налога
 		if (ychitivatNalog)
 			D2 = (float) (H * 0.87);
 		else
@@ -46,6 +46,7 @@ public class Calculate implements CalculateInterface{ // Создаем клас
 		CalculateAll();
 		JFrameText output = new JFrameText("Расчет", 250, 100);
 		output.SetData("Сумма зарплаты составила:" + String.valueOf(D2));
+		result = String.valueOf(D2);
 	}
 	//проверяем все ли введенные данные являются числами (могут ли быть сконвертированны в Float и не пустые) и запоминаем
 	public boolean ParseAllData(String X_str, String Z_str, String T_str) 
@@ -72,6 +73,6 @@ public class Calculate implements CalculateInterface{ // Создаем клас
 	    }
 	}
 	public float getFinalValue() {
-		return D2; //возвращает итоговое значение вклада
+		return D2; //возвращает итоговое значение 
 	}
 }

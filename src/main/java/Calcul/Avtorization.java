@@ -8,12 +8,12 @@ import javax.swing.*;
 
 public class Avtorization {
 	
-	String i="login"; String a="password";
+	String i="login"; String a="password"; String w="admin"; String v="admin";
 	
 	public static JTextField log;
 	
-	public Avtorization() {
-	JFrame main_GUI = new JFrame("Депозитный калькулятор с капитализацией");	// создание графического окна
+	public Avtorization () {
+	JFrame main_GUI = new JFrame("Расчетный калькулятор. Повременная система оплаты труда.");	// создание графического окна
 	main_GUI.setTitle ("Калькулятор");
 	main_GUI.setBounds(300,200,400,320);
 	main_GUI.setResizable(false); // фиксированный размер окна
@@ -47,13 +47,14 @@ public class Avtorization {
 				main_GUI.setVisible(false);
 				Form student1 = new Form();
 			}
-			else if (log.getText().equals(i)&&password.getText().equals(a)) {
+			else if (log.getText().equals(w)&&password.getText().equals(v)) {
 					JOptionPane.showMessageDialog(null, "Welcome", "welcome", 1);
-					
+					main_GUI.setVisible(false);
+					admin student2 = new admin();
 					
 			}
 			else {
-            	JOptionPane.showMessageDialog(null, "Error", "Check youre login or password", 0);
+            	JOptionPane.showMessageDialog(null, "Error", "Check youre login or password", 0);  //проверка логина и пароля
             	password.setText("");
             	log.setText("");
             

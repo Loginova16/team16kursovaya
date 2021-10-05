@@ -4,8 +4,14 @@ import java.awt.event.ActionListener; //библиотека для событи
 import java.io.File;
 
 import javax.swing.*; // Библиотека для GUI (построена на основе awt)
+
+import Calcul.ListenerCreate;
 public class Form {
 	static JComboBox<?> combobox; // добавление JComboBox
+	public static JTextField sum_field;
+	public static JTextField term_field;
+	public static JTextField rate_field;
+	public static JTextField output_field;
 		
 	public Form() {
 		JFrame main_GUI = new JFrame("Зарплатный калькулятор");	// создание графического окна
@@ -24,7 +30,7 @@ public class Form {
 		
 	
 		JButton button_exit = new JButton("Выход"); // добавляем кнопку Выход
-		button_exit.setBounds(270,280,130,40);
+		button_exit.setBounds(295,280,130,40);
 		ActionListener actionListener = new ListenerButton(); //создаем слушатель
 		button_exit.addActionListener(actionListener); // добавляем слушатель к кнопке
 		main_panel.add(button_exit);
@@ -34,7 +40,7 @@ public class Form {
 		main_panel.add(sum_label);
 		
 		
-		JTextField sum_field = new JTextField ();  // Добавляем поле ввода
+		sum_field = new JTextField ();  // Добавляем поле ввода
 		sum_field.setBounds(300, 55, 100, 30);
 		main_panel.add(sum_field);
 		
@@ -44,17 +50,17 @@ public class Form {
 		JLabel term_label = new JLabel ("Кол-во раб. ед. времени за смену:"); // Добавляем надпись
 		term_label.setBounds(10,90,300,60);
 		main_panel.add(term_label);
-		JLabel sum_labe2 = new JLabel ("(дневаня (1) /часовая (кол-во часов за смену)"); // Добавляем надпись 
+		JLabel sum_labe2 = new JLabel ("(дневная (1) /часовая (кол-во часов за смену)"); // Добавляем надпись 
 		sum_labe2.setBounds(10,113,300,60);
 		main_panel.add(sum_labe2);
-		JTextField term_field = new JTextField ();  // Добавляем поле для ввода
+		term_field = new JTextField ();  // Добавляем поле для ввода
 		term_field.setBounds(300, 105, 100, 30);
 		main_panel.add(term_field);
 		
 		JLabel rate_label = new JLabel ("Кол-во рабочих дней в месяце: ");  // Добавляем надпись
 		rate_label.setBounds(10,150,300,40);
 		main_panel.add(rate_label);
-		JTextField rate_field = new JTextField ();  // Добавляем поле для ввода 
+		rate_field = new JTextField ();  // Добавляем поле для ввода 
 		rate_field.setBounds(300, 155, 100, 30);
 		main_panel.add(rate_field);
 		
@@ -65,6 +71,12 @@ public class Form {
 		JCheckBox premia_cbox = new JCheckBox();
 		premia_cbox.setBounds(135,230,40,40);
 		main_panel.add(premia_cbox);
+		
+		JButton button_create = new JButton("Create PDF"); // добавляем кнопку
+		button_create.setBounds(160,280,125,40);
+		ActionListener actionCreate = new ListenerCreate(); //создаем слушатель для кнопки PDF
+		button_create.addActionListener(actionCreate); // добавляем слушатель к кнопке
+		main_panel.add(button_create);
 		
 		JMenuBar bar = new JMenuBar();  
 		main_GUI.setJMenuBar(bar);
