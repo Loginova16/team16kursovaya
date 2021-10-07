@@ -1,4 +1,4 @@
-package Calcul;
+/*package Calcul;
 
 import static org.junit.Assert.*;
 
@@ -22,3 +22,4 @@ public class CalculateTest {
   }
 
 }
+*/

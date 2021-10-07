@@ -1,4 +1,4 @@
-package Calcul;
+/*package Calcul;
 
 import static org.junit.Assert.*;
 
@@ -17,3 +17,4 @@ public class parseTest {
         assertTrue(calc.ParseAllData("10", "0.023f", "010.2")); // ���������� ��� ������ ����� ���� ��������������� � Float
     }
 }
+*/

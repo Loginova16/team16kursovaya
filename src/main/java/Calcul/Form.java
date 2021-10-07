@@ -12,6 +12,7 @@ public class Form {
 	public static JTextField term_field;
 	public static JTextField rate_field;
 	public static JTextField output_field;
+	public static JTextField premia_field;
 		
 	public Form() {
 		JFrame main_GUI = new JFrame("Зарплатный калькулятор");	// создание графического окна
@@ -114,9 +115,6 @@ public class Form {
 				JLabel students_label2 = new JLabel ("Разработчик 1 - Хайруллина Элина"); // Добавляем надпись 
 				students_label2.setBounds(20,35,250,30); // задаем размер
 				Information.add(students_label2); 
-				JLabel students_label3 = new JLabel ("Разработчик 4 - User416"); // Добавляем надпись 
-				students_label3.setBounds(260,10,250,30); // задаем размер
-				Information.add(students_label3);
 				JLabel students_label5 = new JLabel (""); // Добавляем надпись 
 				students_label5.setBounds(260,35,250,30); // задаем размер
 				Information.add(students_label5);

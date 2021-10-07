@@ -1,5 +1,8 @@
 package Calcul; // Используем пакет Калькулятор
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -9,18 +12,37 @@ public class Calculate implements CalculateInterface{ // Создаем клас
 	public static String result;
 	boolean isPremia = false; 
 	boolean ychitivatNalog = false;
-	float H, T, a, D1,D2, C, Z, X; // H- налог T-тарифная ставка a-процент премии D1-новая сумма зарплаты(БЕЗ УЧЕТА НДФЛ) D2-новая сумма вклада(С УЧЕТОМ НДФЛ) С-
-	
-	@Override // Переопределяет метод интерфейса
+	public static float H, T, a, D1,D2, C, Z, X, c; // H- РЅР°Р»РѕРі T-С‚Р°СЂРёС„РЅР°СЏ СЃС‚Р°РІРєР° a-РїСЂРѕС†РµРЅС‚ РїСЂРµРјРёРё D1-РЅРѕРІР°СЏ СЃСѓРјРјР° Р·Р°СЂРїР»Р°С‚С‹(Р‘Р•Р— РЈР§Р•РўРђ РќР”Р¤Р›) D2-РЅРѕРІР°СЏ СЃСѓРјРјР° РІРєР»Р°РґР°(РЎ РЈР§Р•РўРћРњ РќР”Р¤Р›) РЎ-
+	protected static String line;
+	@Override // РџРµСЂРµРѕРїСЂРµРґРµР»СЏРµС‚ РјРµС‚РѕРґ РёРЅС‚РµСЂС„РµР№СЃР°
 	public void CalculateNalog()
 	{
-		if (isPremia)
+		if(isPremia) {
+			try {
+			File file = new File("prem.txt");
+			//создаем объект FileReader для объекта File
+			FileReader fr = new FileReader(file);
+			//создаем BufferedReader с существующего FileReader для построчного считывания
+			BufferedReader reader = new BufferedReader(fr);
+			// считаем сначала первую строку
+			line = reader.readLine();
 
-			H = (float) (T*Z*X)*1.2f;
-			else 
-			H = (float) (T*Z*X);
 
+			
+			c = Float.parseFloat(line);
+			System.out.println(c);
+			} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			} catch (IOException e) {
+			e.printStackTrace();
 			}
+
+
+	H = (float) (T*Z*X)*c;
+	}else {
+	H = (float) (T*Z*X);
+
+	}}
 	@Override
 	public void CalculatePrecent() {
 		//высчитываем новую сумму зп с учетом процентов
