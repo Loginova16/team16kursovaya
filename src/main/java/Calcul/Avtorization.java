@@ -8,13 +8,13 @@ import javax.swing.*;
 
 public class Avtorization {
 	
-	String i="1"; String a="1"; String b="2"; 
+	String i="login"; String a="***"; String b="admin"; 
 	
 	public static JTextField log;
 	
 	public Avtorization () {
-	JFrame main_GUI = new JFrame("Расчетный калькулятор. Повременная система оплаты труда.");	// создание графического окна
-	main_GUI.setTitle ("Калькулятор");
+	JFrame main_GUI = new JFrame("Calculator. Time form salary");	// создание графического окна
+	main_GUI.setTitle ("Calculator");
 	main_GUI.setBounds(300,200,400,320);
 	main_GUI.setResizable(false); // фиксированный размер окна
 	
@@ -35,7 +35,7 @@ public class Avtorization {
 	main_panel.add(password);
 	password.setVisible(true);
 	
-	JButton aut = new JButton("авторизация"); //Добавляем кнопку авторизация
+	JButton aut = new JButton("autorization"); //Добавляем кнопку авторизация
 	aut.setBounds(200, 150, 140, 40);
     aut.addActionListener(new ActionListener() {						//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ	
 		
@@ -65,11 +65,11 @@ public class Avtorization {
     
 	main_panel.add(aut);
 	
-	JLabel cal = new JLabel("Логин");
+	JLabel cal = new JLabel("Login");
 	cal.setBounds(30, 50, 150, 80);
 	main_panel.add(cal);
 	
-	JLabel can = new JLabel("Пароль");
+	JLabel can = new JLabel("Password");
 	can.setBounds(230, 50, 150, 80);
 	main_panel.add(can);
 	

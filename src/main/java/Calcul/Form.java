@@ -15,8 +15,8 @@ public class Form {
 	public static JTextField premia_field;
 		
 	public Form() {
-		JFrame main_GUI = new JFrame("Р—Р°СЂРїР»Р°С‚РЅС‹Р№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ");	// СЃРѕР·РґР°РЅРёРµ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РѕРєРЅР°
-		main_GUI.setTitle ("РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ");
+		JFrame main_GUI = new JFrame("Salary Calculator");	// СЃРѕР·РґР°РЅРёРµ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РѕРєРЅР°
+		main_GUI.setTitle ("Calculator");
 		main_GUI.setBounds(500,200,440,400);
 		main_GUI.setResizable(false); // С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ СЂР°Р·РјРµСЂ РѕРєРЅР°
 		
@@ -25,18 +25,18 @@ public class Form {
 		main_panel.setLayout(null);
 		main_GUI.add(main_panel);
 		
-		JLabel laba_info = new JLabel("Р—Р°СЂРїР»Р°С‚РЅС‹Р№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ"); // РћС‚РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСЃС‚Р° РёР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
+		JLabel laba_info = new JLabel("Salary Calculator"); // РћС‚РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСЃС‚Р° РёР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
 		laba_info.setBounds(135,0,150,30);
 		main_panel.add(laba_info);
 		
 	
-		JButton button_exit = new JButton("Р’С‹С…РѕРґ"); // РґРѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ Р’С‹С…РѕРґ
+		JButton button_exit = new JButton("Exit"); // РґРѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ Р’С‹С…РѕРґ
 		button_exit.setBounds(295,280,130,40);
 		ActionListener actionListener = new ListenerButton(); //СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµР»СЊ
 		button_exit.addActionListener(actionListener); // РґРѕР±Р°РІР»СЏРµРј СЃР»СѓС€Р°С‚РµР»СЊ Рє РєРЅРѕРїРєРµ
 		main_panel.add(button_exit);
 		
-		JLabel sum_label = new JLabel ("РўР°СЂРёС„РЅР°СЏ СЃС‚Р°РІРєР°: "); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
+		JLabel sum_label = new JLabel ("Tariff rate: "); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
 		sum_label.setBounds(10,50,120,40);
 		main_panel.add(sum_label);
 		
@@ -48,29 +48,29 @@ public class Form {
 		
 		
 		
-		JLabel term_label = new JLabel ("РљРѕР»-РІРѕ СЂР°Р±. РµРґ. РІСЂРµРјРµРЅРё Р·Р° СЃРјРµРЅСѓ:"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ
+		JLabel term_label = new JLabel ("Number work.ed.per shift:"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ
 		term_label.setBounds(10,90,300,60);
 		main_panel.add(term_label);
-		JLabel sum_labe2 = new JLabel ("(РґРЅРµРІРЅР°СЏ (1) /С‡Р°СЃРѕРІР°СЏ (РєРѕР»-РІРѕ С‡Р°СЃРѕРІ Р·Р° СЃРјРµРЅСѓ)"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
+		JLabel sum_labe2 = new JLabel ("(day(1) /hour (hours per shift)"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
 		sum_labe2.setBounds(10,113,300,60);
 		main_panel.add(sum_labe2);
 		term_field = new JTextField ();  // Р”РѕР±Р°РІР»СЏРµРј РїРѕР»Рµ РґР»СЏ РІРІРѕРґР°
 		term_field.setBounds(300, 105, 100, 30);
 		main_panel.add(term_field);
 		
-		JLabel rate_label = new JLabel ("РљРѕР»-РІРѕ СЂР°Р±РѕС‡РёС… РґРЅРµР№ РІ РјРµСЃСЏС†Рµ: ");  // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ
+		JLabel rate_label = new JLabel ("Working days per month: ");  // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ
 		rate_label.setBounds(10,150,300,40);
 		main_panel.add(rate_label);
 		rate_field = new JTextField ();  // Р”РѕР±Р°РІР»СЏРµРј РїРѕР»Рµ РґР»СЏ РІРІРѕРґР° 
 		rate_field.setBounds(300, 155, 100, 30);
 		main_panel.add(rate_field);
 		
-		JLabel premia_label = new JLabel ("РЎС‡РёС‚Р°С‚СЊ СЃ РїСЂРµРјРёРµР№ "); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
-		premia_label.setBounds(10,230,115,40);
+		JLabel premia_label = new JLabel ("Count with a premia"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
+		premia_label.setBounds(10,230,150,40);
 		main_panel.add(premia_label);
 		
 		JCheckBox premia_cbox = new JCheckBox();
-		premia_cbox.setBounds(135,230,40,40);
+		premia_cbox.setBounds(152,230,60,40);
 		main_panel.add(premia_cbox);
 		
 		JButton button_create = new JButton("Create PDF"); // РґРѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ
@@ -81,38 +81,38 @@ public class Form {
 		
 		JMenuBar bar = new JMenuBar();  
 		main_GUI.setJMenuBar(bar);
-		JMenu menu = new JMenu("РњРµРЅСЋ");
+		JMenu menu = new JMenu("Menu");
 		main_panel.add(menu);
 		bar.add(menu);
 		
-		JMenuItem info = new JMenuItem("Р�РЅС„РѕСЂРјР°С†РёСЏ Рѕ СЂР°СЃС‡РµС‚Рµ РЅР°Р»РѕРіР°");
+		JMenuItem info = new JMenuItem("Inform about nalog");
 		main_panel.add(info);
 		menu.add(info);
 		info.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg1) {
-				JOptionPane.showMessageDialog(main_panel, "РќР°Р»РѕРіРѕРІС‹Р№ РєРѕРґРµРєСЃ Р Р¤ РїСЂРµРґСѓСЃРјР°С‚СЂРёРІР°РµС‚ РїСЂРµРґСѓСЃРјР°С‚СЂРёРІР°РµС‚ РЅР°Р»РѕРіРѕРѕР±Р»Р°Р¶РµРЅРёРµ \n РЅР°  РґРѕС…РѕРґС‹ С„РёР·РёС‡РµСЃРєРёС… Р»РёС† РІ СЂР°Р·Р°РјРµСЂРµ 13%:\n"
+				JOptionPane.showMessageDialog(main_panel, " Nalog code RF provides nalog \n on income 13%:\n"
 					);
 			}
 		});
-		JMenuItem prem = new JMenuItem("Р�РЅС„РѕСЂРјР°С†РёСЏ Рѕ СЂР°СЃС‡РµС‚Рµ РїСЂРµРјРёРё");
+		JMenuItem prem = new JMenuItem("Inform about premia");
 		main_panel.add(prem);
 		menu.add(prem);
 		prem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg1) {
-				JOptionPane.showMessageDialog(main_panel, "РћСЃРѕР±РѕРµ РІРѕР·РЅР°РіСЂР°Р¶РґРµРЅРёРµ СЂР°Р±РѕС‡РёРј РЅР°С‡РёСЃР»СЏРµС‚СЃСЏ РІ СЂР°Р·РјРµСЂРµ 20% Рє РѕСЃРЅРѕРІРЅРѕРјСѓ \n РґРѕС…РѕРґСѓ РІ РјРµСЃСЏС† "
+				JOptionPane.showMessageDialog(main_panel, "Voznagrozhdenie 20% to main \n dohod in month "
 					);
 			}
 		});
 		
-		JMenuItem students = new JMenuItem("Р�РЅС„РѕСЂРјР°С†РёСЏ Рѕ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°С…");
+		JMenuItem students = new JMenuItem("Inform about developers");
 		menu.add(students); // РґРѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ РЅР° РІС‹РїР°РґР°СЋР·РµРµ РјРµРЅСЋ
 		students.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg1) {
-				Info Information = new Info("Р�РЅС„РѕСЂРјР°С†РёСЏ Рѕ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°С…", 500, 110); 
-				JLabel students_label1 = new JLabel ("РњРѕРґРµСЂР°С‚РѕСЂ - Р›РѕРіРёРЅРѕРІР° РђРЅР°СЃС‚Р°СЃРёСЏ"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
+				Info Information = new Info("Inform about developers", 500, 110); 
+				JLabel students_label1 = new JLabel ("Moderator - Loginova Anastasiya"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
 				students_label1.setBounds(20,10,250,30); // Р·Р°РґР°РµРј СЂР°Р·РјРµСЂ
 				Information.add(students_label1);
-				JLabel students_label2 = new JLabel ("Р Р°Р·СЂР°Р±РѕС‚С‡РёРє 1 - РҐР°Р№СЂСѓР»Р»РёРЅР° Р­Р»РёРЅР°"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
+				JLabel students_label2 = new JLabel ("Developer 1 - Khairullina Elina"); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
 				students_label2.setBounds(20,35,250,30); // Р·Р°РґР°РµРј СЂР°Р·РјРµСЂ
 				Information.add(students_label2); 
 				JLabel students_label5 = new JLabel (""); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
@@ -122,14 +122,14 @@ public class Form {
 			}
 		});
 		
-		JMenuItem exit = new JMenuItem("Р’С‹С…РѕРґ");
+		JMenuItem exit = new JMenuItem("Exit");
 		main_panel.add(exit);
 		menu.add(exit);
 		exit.addActionListener(actionListener);
 		
 		
 		
-		String [] tax = { "Р’РєР»СЋС‡Р°С‚СЊ РІ СЂР°СЃС‡РµС‚", "РќРµ РІРєР»СЋС‡Р°С‚СЊ РІ СЂР°СЃС‡РµС‚"
+		String [] tax = { "Include in calcul", "do not include in calcul"
 		};
 		
 		JComboBox tax_box = new JComboBox(tax); // РЎРѕР·РґР°РµРј РІС‹РїР°РґР°СЋС‰РёР№ Р±РѕРєСЃ
@@ -137,13 +137,13 @@ public class Form {
 		main_panel.add(tax_box);
 		
 		
-		JButton calc = new JButton("Р Р°СЃСЃС‡РёС‚Р°С‚СЊ");
+		JButton calc = new JButton("Calculate");
 		calc.addActionListener(new ActionListener() { // Р”РѕР±Р°РІР»СЏРµРј СЃР»СѓС€Р°С‚РµР»СЏ РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String nalogstr = tax_box.getSelectedItem().toString();
 				boolean ychitivatNalog = true;
-				if(nalogstr == "РќРµ РІРєР»СЋС‡Р°С‚СЊ РІ СЂР°СЃС‡РµС‚")
+				if(nalogstr == "do not include in calcul")
 					ychitivatNalog = false;
 				Calculate calc = new Calculate(rate_field.getText(),term_field.getText(),sum_field.getText(),premia_cbox.isSelected(),ychitivatNalog);
 			}
@@ -151,7 +151,7 @@ public class Form {
 		calc.setBounds(20, 280, 130, 40);
 		main_panel.add(calc);
 		
-		JLabel tax_label = new JLabel ("РќР°Р»РѕРі: "); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
+		JLabel tax_label = new JLabel ("Nalog: "); // Р”РѕР±Р°РІР»СЏРµРј РЅР°РґРїРёСЃСЊ 
 		tax_label.setBounds(10,190,115,40);
 		main_panel.add(tax_label);
 				

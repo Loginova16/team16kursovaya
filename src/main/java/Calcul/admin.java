@@ -18,8 +18,8 @@ public class admin {
 	public static JTextField pas;
 	
 	public admin() {
-	JFrame main_GUI = new JFrame("Депозитный калькулятор с капитализацией");	// создание графического окна
-	main_GUI.setTitle ("Калькулятор");
+	JFrame main_GUI = new JFrame("Calculator. Time form salary");	// создание графического окна
+	main_GUI.setTitle ("Calculator");
 	main_GUI.setBounds(300,200,400,320);
 	main_GUI.setResizable(false); // фиксированный размер окна
 	
@@ -37,12 +37,12 @@ public class admin {
     	
     
     	
-    	JButton ap = new JButton("Применить"); //Добавляем кнопку применить
+    	JButton ap = new JButton("Apply"); //Добавляем кнопку применить
     	ap.setBounds(200, 150, 140, 40);
     	ActionListener actionCreate1 = new Apply(); 
         ap.addActionListener(actionCreate1);
    
-    	JButton back = new JButton("Назад"); //Добавляем кнопку назад
+    	JButton back = new JButton("Back"); //Добавляем кнопку назад
     	back.setBounds(50, 150, 140, 40);
     	back.addActionListener(new ActionListener() { // Добавляем слушателя нажатия кнопки
 			@Override
@@ -55,7 +55,7 @@ public class admin {
     	
     	main_panel.add(ap);
     	
-    	JLabel promo = new JLabel("Новый коэффициент"); 
+    	JLabel promo = new JLabel("New coefficient"); 
     	promo.setBounds(30, 50, 150, 80);
     	main_panel.add(promo);
     	
