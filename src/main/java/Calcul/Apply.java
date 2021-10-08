@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
@@ -15,7 +16,17 @@ public class Apply implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 
-	file = new File("prem.txt");
+	String sepka = File.separator;
+	String filepath = "";
+    try {
+        filepath = new File("").getCanonicalPath();
+    } catch (IOException e3) {
+        // TODO Auto-generated catch block
+        e3.printStackTrace();
+    }
+    filepath+= sepka+"prem.txt";
+    
+	file = new File(filepath);
 
 	k1 = admin.log.getText();	
 	try {

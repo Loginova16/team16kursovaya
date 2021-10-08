@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class Avtorization {
 	
-	String i="login"; String a="password"; String b="admin"; 
+	String i="1"; String a="1"; String b="2"; 
 	
 	public static JTextField log;
 	

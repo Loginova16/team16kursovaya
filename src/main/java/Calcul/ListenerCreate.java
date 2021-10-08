@@ -1,6 +1,7 @@
 package Calcul;
 
 import java.awt.event.*;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,8 +27,19 @@ public class ListenerCreate implements ActionListener {
 	@Override 
 	public void actionPerformed(ActionEvent arg0) { 
 		Document document = new Document(); //создание класса Document
+		
+		String sepka = File.separator;
+		String filepath = "";
+        try {
+            filepath = new File("").getCanonicalPath();
+        } catch (IOException e3) {
+            // TODO Auto-generated catch block
+            e3.printStackTrace();
+        }
+        filepath+=sepka+"Check.pdf";
+        
 		try {
-			PdfWriter.getInstance(document, new FileOutputStream("Check.pdf"));
+			PdfWriter.getInstance(document, new FileOutputStream(filepath));
 		} catch (FileNotFoundException | DocumentException e) {
 			e.printStackTrace();
 		}
